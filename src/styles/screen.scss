@@ -10,4 +10,68 @@ html {
 body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  background-color: black;
+}
+
+.Header {
+  background-color: red;
+  height: 220px;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/736x/4e/11/39/4e1139abff047d1c78af1b26604045de.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      color: white;
+      background-color: hsla(0, 0%, 0%, 0.3);
+      width: 450px;
+      text-align: center;
+      padding: 10px;
+      opacity: 1;
+      border-radius: 10px;
+    }
+  }
+
+  .NavBar {
+    color: white;
+
+    .navItemList {
+      list-style: none;
+      display: flex;
+      flex-flow: row-reverse;
+      margin: 0;
+
+      .navItemDrop {
+        background-color: hsla(0, 0%, 0%, 0.8);
+        display: flex;
+        flex-direction: column;
+
+        .navItem {
+          padding: 10px;
+
+          &:hover {
+            background-color: hsla(37, 84%, 51%, 0.78);
+            color: #333;
+          }
+        }
+      }
+
+      .DropDown {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        position: absolute;
+        list-style: none;
+
+
+        li {
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
 }
