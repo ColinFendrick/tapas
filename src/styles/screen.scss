@@ -2,6 +2,12 @@
 
 $base-text-size: 16px;
 $base-font-family: sans-serif;
+$hoverColor: hsla(37, 84%, 51%, 0.78);
+
+@mixin hover {
+  background-color: $hoverColor;
+  transition: background-color 300ms ease;
+}
 
 @mixin flag {
   width: 30px;
@@ -85,7 +91,8 @@ body {
           padding: 10px;
 
           &:hover {
-            background-color: hsla(37, 84%, 51%, 0.78);
+            @include hover;
+
             color: #333;
           }
         }
@@ -103,7 +110,7 @@ body {
           padding: 4px 10px;
 
           &:hover {
-            background-color: hsla(37, 84%, 51%, 0.78);
+            @include hover;
           }
         }
       }
@@ -117,6 +124,10 @@ body {
   h2 {
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.3);
+
+    &:hover {
+      @include hover;
+    }
   }
 }
 
