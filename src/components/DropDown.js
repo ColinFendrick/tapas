@@ -4,7 +4,7 @@ import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 
 const DropDown = ({ name }) => {
-  const list = store.initState[`${name}`].items.map((item, i) => {
+  const list = store.dropDown[`${name}`].items.map((item, i) => {
     return <Link to='/menu' key={i}>
       <li key={i}>{item}</li>
     </Link>
