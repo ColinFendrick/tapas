@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
+import store from '../store'
 
-const MenuDetails = () => (
-  <div className='MenuDetails'>
-    <h1>menu stuff here</h1>
-  </div>
-)
+@observer class MenuDetails extends Component {
+  componentDidMount () {
+    store.query()
+  }
 
-export default observer(MenuDetails)
+  render () {
+    return <div className='MenuDetails'>
+      {store.currentMenu.map((item, i) =>
+        <h1>{item.name}</h1>
+      )}
+    </div>
+  }
+}
+
+export default MenuDetails
