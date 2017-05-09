@@ -1,10 +1,10 @@
 export const initialState = {
   'Menu': {
-    'items': ['Jamaican', 'Irish', 'Spanish', 'Breakfast', 'Small Plate'],
+    'items': ['Jamaican', 'Irish', 'Spanish', 'Small Plate', 'Breakfast'],
     'display': 'none'
   },
   'Contact Us': {
-    'items': ['Email', 'Snailmail, fuckhead'],
+    'items': ['Email', 'Write me a fuckin letter'],
     'display': 'none'
   },
   'Locations': {
