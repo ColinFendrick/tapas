@@ -20,3 +20,12 @@ export const initialState = {
     'display': 'none'
   }
 }
+
+export const query = body => {
+  const url = 'https://api.graph.cool/simple/v1/cj2hpn26v8fx70187k7f75y1o'
+  window.fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/JSON' },
+    body: {'query': `query ${body}`}})
+  .then(r => r.json())
+}

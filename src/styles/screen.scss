@@ -122,9 +122,63 @@ body {
   }
 }
 
+.Home {
+  background-image: linear-gradient(to bottom, hsla(226, 80%, 30%, 0.68), hsla(4, 17%, 49%, 0.61));
+  height: 450px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+
+  div {
+    margin: auto;
+
+    .welcome {
+      vertical-align: baseline;
+      transition: opacity 700ms;
+      transition-delay: 1.2s;
+    }
+
+    .bars {
+      opacity: 0;
+      transition: opacity 1s;
+      font-size: 1.7em;
+      color: hsl(147, 62%, 49%);
+    }
+  }
+
+  &:hover div {
+    .bars {
+      opacity: 1;
+    }
+
+    .welcome {
+      opacity: 0;
+    }
+  }
+
+  .image-slider-wrapper {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    visibility: hidden;
+
+    .image-slider li {
+      width: 200px;
+      list-style: none;
+      float: left;
+      max-width: 100%;
+    }
+
+    .image-slider img {
+      width: 300px;
+    }
+  }
+}
+
 .Menu {
   background: url('http://www196.lunapic.com/do-not-link-here-use-hosting-instead/149433592064598?6506192');
   height: 500px;
+
   h2 {
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.3);
