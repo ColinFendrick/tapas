@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Header, Menu, ContactForm, Locations, History } from '.'
+import { Header, Menu, ContactForm, Locations, History, Reservations } from '.'
 
 class App extends Component {
   render () {
@@ -11,6 +11,7 @@ class App extends Component {
         <Route path='/contact us' component={ContactForm} />
         <Route path='/locations' component={Locations} />
         <Route path='/history' component={History} />
+        <Route path='/reservations' component={Reservations} />
       </div>
     </Router>
   }

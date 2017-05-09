@@ -9,6 +9,7 @@ class NavBar extends Component {
         <NavItemDrop name='History' />
         <NavItemDrop name='Locations' />
         <NavItemDrop name='Contact Us' />
+        <NavItemDrop name='Reservations' />
         <NavItemDrop name='Menu' />
       </ul>
     </div>

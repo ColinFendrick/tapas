@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 const DropDown = ({ name }) => {
   const list = store.dropDown[`${name}`].items.map((item, i) => {
-    return <NavLink to={`/${name}/#${item}`} key={i}>
+    return <NavLink to={`/${name}/${item}`} key={i}>
       <li key={i}>{item}</li>
     </NavLink>
   })

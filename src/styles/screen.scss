@@ -30,6 +30,7 @@ body {
 .Header {
   height: 220px;
   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/4e/11/39/4e1139abff047d1c78af1b26604045de.jpg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,7 +124,7 @@ body {
 
 .Menu {
   background: url('http://www196.lunapic.com/do-not-link-here-use-hosting-instead/149433592064598?6506192');
-
+  height: 500px;
   h2 {
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.3);
