@@ -8,7 +8,7 @@ export const initialState = {
     'display': 'none'
   },
   'Locations': {
-    'items': ['Tampa', 'Dublin', 'East Berlin circa 1988'],
+    'items': ['East Berlin circa 1988', 'Cheyenne Mountain Complex', 'Inside the Statue of Liberty\'s Torch'],
     'display': 'none'
   },
   'History': {

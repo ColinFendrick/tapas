@@ -28,7 +28,6 @@ body {
 }
 
 .Header {
-  background-color: red;
   height: 220px;
   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/4e/11/39/4e1139abff047d1c78af1b26604045de.jpg');
   display: flex;
@@ -94,6 +93,10 @@ body {
             @include hover;
 
             color: #333;
+          }
+
+          &:active {
+            background-color: blue;
           }
         }
       }

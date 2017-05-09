@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import store from '../store'
 import DropDown from './DropDown'
 
@@ -8,9 +8,9 @@ const NavItemDrop = ({ name }) => (
     <li className='navItemDrop'
       onMouseOver={() => store.hoverItem(`${name}`)}
       onMouseLeave={store.hoverLeave}>
-      <Link to='/name'>
+      <NavLink to={`/${name}`}>
         <div className='navItem'>{name}</div>
-      </Link>
+      </NavLink>
       <DropDown name={name} />
     </li>
   </div>

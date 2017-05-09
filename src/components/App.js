@@ -8,7 +8,7 @@ class App extends Component {
       <div>
         <Header />
         <Route path='/menu' component={Menu} />
-        <Route path='/contact_us' component={ContactForm} />
+        <Route path='/contact us' component={ContactForm} />
         <Route path='/locations' component={Locations} />
         <Route path='/history' component={History} />
       </div>
