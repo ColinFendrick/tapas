@@ -3,6 +3,12 @@
 $base-text-size: 16px;
 $base-font-family: sans-serif;
 
+@mixin flag {
+  width: 30px;
+  position: absolute;
+  top: 110px;
+}
+
 html {
   @include full-height;
 }
@@ -11,6 +17,7 @@ body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
   background-color: black;
+  cursor: default;
 }
 
 .Header {
@@ -20,30 +27,55 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   .title {
+    position: relative;
+    width: stretch;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    font-family: cursive;
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    border-radius: 30px;
+    height: 150px;
 
     h1 {
-      color: white;
-      background-color: hsla(0, 0%, 0%, 0.3);
-      width: 450px;
       text-align: center;
-      padding: 10px;
+      padding: 0 10px;
       opacity: 1;
-      border-radius: 10px;
+    }
+
+    h3 {
+      width: 350px;
+      text-align: center;
+      padding: 0 40px;
+    }
+
+    .brazil {
+      @include flag;
+
+      left: 10px;
+    }
+
+    .ireland {
+      @include flag;
+
+      right: 10px;
     }
   }
 
   .NavBar {
     color: white;
+    width: 100%;
 
     .navItemList {
       list-style: none;
       display: flex;
       flex-flow: row-reverse;
       margin: 0;
+      border-radius: 10px;
 
       .navItemDrop {
         background-color: hsla(0, 0%, 0%, 0.8);
@@ -67,11 +99,18 @@ body {
         position: absolute;
         list-style: none;
 
-
         li {
           padding: 4px 10px;
+
+          &:hover {
+            background-color: hsla(37, 84%, 51%, 0.78);
+          }
         }
       }
     }
   }
+}
+
+.Body {
+  color: white;
 }
