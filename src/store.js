@@ -1,11 +1,32 @@
 import { observable } from 'mobx'
 
 class Store {
-  @observable dropDown = {}
+  @observable dropDown = {
+    'Menu': 'none',
+    'Contact Us': 'none',
+    'Locations': 'none',
+    'History': 'none'
+  }
 
   hoverItem = name => {
-    this.dropDown = {}
+    this.dropDown = {
+      'Menu': 'none',
+      'Contact Us': 'none',
+      'Locations': 'none',
+      'History': 'none'
+    }
     this.dropDown = {[name]: 'inline'}
+    console.log(this.dropDown)
+  }
+
+  hoverLeave = () => {
+    console.log(`Hey`)
+    this.dropDown = {
+      'Menu': 'none',
+      'Contact Us': 'none',
+      'Locations': 'none',
+      'History': 'none'
+    }
   }
 }
 
