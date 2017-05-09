@@ -1,32 +1,34 @@
-import { observable } from 'mobx'
+import { observable, action } from 'mobx'
 
 class Store {
-  @observable dropDown = {
-    'Menu': 'none',
-    'Contact Us': 'none',
-    'Locations': 'none',
-    'History': 'none'
+  initState = {
+    'Menu': {
+      'items': ['Jamaican', 'Irish', 'Spanish', 'Breakfast', 'Small Plate'],
+      'display': 'none'
+    },
+    'Contact Us': {
+      'items': ['Email', 'Snailmail, fuckhead'],
+      'display': 'none'
+    },
+    'Locations': {
+      'items': ['Tampa', 'Dublin', 'East Berlin circa 1988'],
+      'display': 'none'
+    },
+    'History': {
+      'items': ['Story', 'Follow Us'],
+      'display': 'none'
+    }
   }
 
-  hoverItem = name => {
-    this.dropDown = {
-      'Menu': 'none',
-      'Contact Us': 'none',
-      'Locations': 'none',
-      'History': 'none'
-    }
-    this.dropDown = {[name]: 'inline'}
-    console.log(this.dropDown)
+  @observable dropDown = this.initState
+
+  @action hoverItem = name => {
+    this.dropDown = this.initState
+    this.dropDown[name] = {...this.dropDown[name], 'display': 'inline'}
   }
 
-  hoverLeave = () => {
-    console.log(`Hey`)
-    this.dropDown = {
-      'Menu': 'none',
-      'Contact Us': 'none',
-      'Locations': 'none',
-      'History': 'none'
-    }
+  @action hoverLeave = () => {
+    this.dropDown = this.initState
   }
 }
 
