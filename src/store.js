@@ -3,7 +3,7 @@ import { initialState } from './statics'
 
 class Store {
   @observable dropDown = initialState
-  @observable currentMenu = {}
+  @observable currentMenu = []
 
   @action hoverItem = name => {
     this.dropDown = initialState
@@ -14,13 +14,13 @@ class Store {
     this.dropDown = initialState
   }
 
-  query = () => {
+  query = slug => {
     const url = 'https://api.graph.cool/simple/v1/cj2hpn26v8fx70187k7f75y1o'
     window.fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/JSON' },
       body: JSON.stringify({'query': `query {
-          allMenus(filter: {slug: "Breakfast"}) {
+          allMenus(filter: {slug: "${slug}"}) {
             name,
             slug,
             items {
