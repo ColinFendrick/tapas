@@ -18,6 +18,7 @@ body {
   font: $base-text-size / 1 $base-font-family;
   background-color: black;
   cursor: default;
+  color: white;
 }
 
 .Header {
@@ -36,7 +37,6 @@ body {
     flex-direction: column;
     justify-content: center;
     font-family: cursive;
-    color: white;
     background-color: hsla(0, 0%, 0%, 0.3);
     border-radius: 30px;
     height: 150px;
@@ -67,7 +67,6 @@ body {
   }
 
   .NavBar {
-    color: white;
     width: 100%;
 
     .navItemList {
@@ -111,8 +110,13 @@ body {
   }
 }
 
-.Body {
-  color: white;
+.Menu {
+  background: url('http://www196.lunapic.com/do-not-link-here-use-hosting-instead/149433592064598?6506192');
+
+  h2 {
+    text-align: center;
+    background-color: hsla(0, 0%, 0%, 0.3);
+  }
 }
 
 a {
