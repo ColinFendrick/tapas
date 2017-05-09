@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react'
 
 const MenuDetails = () => (
   <div className='MenuDetails'>
@@ -6,4 +7,4 @@ const MenuDetails = () => (
   </div>
 )
 
-export default MenuDetails
+export default observer(MenuDetails)

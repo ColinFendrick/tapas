@@ -3,6 +3,7 @@ import { initialState } from './statics'
 
 class Store {
   @observable dropDown = initialState
+  @observable currentMenu = {}
 
   @action hoverItem = name => {
     this.dropDown = initialState
