@@ -8,10 +8,10 @@ import store from '../store'
   }
 
   render () {
-    return <div className='MenuDetails'>
+    return <div>
       {store.currentMenu.map((item, i) =>
-        <div key={i}>
-          <h1 >{item.name}</h1>
+        <div key={i} className='MenuDetails'>
+          <h1>{item.name}</h1>
           <h4>${item.price}</h4>
           <h3>{item.description}</h3>
         </div>

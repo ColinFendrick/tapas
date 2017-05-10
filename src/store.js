@@ -4,6 +4,10 @@ import { initialState } from './statics'
 class Store {
   @observable dropDown = initialState
   @observable currentMenu = []
+  @observable modal = {
+    'welcome': 'inline',
+    'images': 'none'
+  }
 
   @action hoverItem = name => {
     this.dropDown = initialState
@@ -12,6 +16,13 @@ class Store {
 
   @action hoverLeave = () => {
     this.dropDown = initialState
+  }
+
+  @action welcomeModal = () => {
+    this.modal = {
+      'welcome': 'none',
+      'images': 'inline'
+    }
   }
 
   query = slug => {
