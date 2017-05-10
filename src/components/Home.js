@@ -21,3 +21,5 @@ const Home = () => (
   </div>
 )
 export default observer(Home)
+
+// Comments for git check
