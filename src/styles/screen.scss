@@ -44,8 +44,9 @@ $hoverColor: hsla(37, 84%, 51%, 0.78);
   animation-name: fadeOut;
   animation-duration: $dur;
   animation-delay: $del;
-  animation-timing-function: ease-in;
+  animation-timing-function: linear;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 html {
@@ -183,10 +184,6 @@ body {
 
       font-size: 1.7em;
       color: hsl(147, 62%, 49%);
-      animation-name: fadeOut;
-      animation-duration: 1s;
-      animation-delay: 1.3s;
-      animation-timing-function: ease-in;
     }
   }
 
@@ -194,7 +191,8 @@ body {
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 500ms;
-    animation-delay: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
     width: 100%;
     height: 100vh;
     display: flex;
